@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Calculator" Height="530" Width="341" Background="#b7bec0" ResizeMode="CanMinimize" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/1.png" Width="50"/>
+                <Label Content="Standart" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"  />
+                <Image Source="/Images/clock.png" Margin="149 0 0 0"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBox x:Name="result" Background="#b7bec0" FontSize="25" FontWeight="DemiBold" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="MC" Foreground="#959ea2" HorizontalAlignment="Center"/>
+            <Label Grid.Column="1" Content="MR" Foreground="#959ea2" HorizontalAlignment="Center"/>
+            <Label Grid.Column="2" Content="M+" HorizontalAlignment="Center"/>
+            <Label Grid.Column="3" Content="M-" HorizontalAlignment="Center"/>
+            <Label Grid.Column="4" Content="MS" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Button Height="50" Margin="5 2 2 2" Name="percent" Click="percent_Click" Content="%" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="CE" Click="CE_Click" Content="CE" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn7" Click="btn7_Click" Content="7" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn4" Click="btn4_Click" Content="4" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn1" Click="btn1_Click" Content="1" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="PlusMinus" Click="PlusMinus_Click">
+                    <Image Source="/Images/PlusMinus.png" Height="50"/>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Button Height="50" Margin="5 2 2 2" Name="sqrt" Click="sqrt_Click" >
+                    <Image Source="/Images/sqrt.png" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 0 0 "/>
+                </Button>
+                <Button Height="50" Margin="5 2 2 2" Name="Clear" Click="Clear_Click" Content="C" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn8" Click="btn8_Click" Content="8" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn5" Click="btn5_Click" Content="5" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn2" Click="btn2_Click" Content="2" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn0" Click="btn0_Click" Content="0" FontSize="22"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <Button Height="50" Margin="5 2 2 2" Name="square" Click="square_Click" >
+                    <Image Source="/Images/square.png" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 0 0 "/>
+                </Button>
+                <Button Height="50" Margin="5 2 2 2" Name="backspace" Click="backspace_Click" FontSize="22" >
+                    <Image Source="/Images/backspace.png" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 0 0 0 "/>
+                </Button>
+                <Button Height="50" Margin="5 2 2 2" Name="btn9" Click="btn9_Click" Content="9" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn6" Click="btn6_Click" Content="6" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btn3" Click="btn3_Click" Content="3" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="btnDot" Click="btnDot_Click" Content="." FontSize="22"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="4">
+                <Button Height="50" Margin="5 2 2 2" Name="DevideX" Click="DevideX_Click" >
+                    <Image Source="/Images/devideX.png" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 10 0 0 "/>
+                </Button>
+                <Button Height="50" Margin="5 2 2 2" Name="Devide" Click="devide_Click" Content="/" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="Mult" Click="Mult_Click" Content="*" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="plus" Click="plus_Click" Content="+" FontSize="22"/>
+                <Button Height="50" Margin="5 2 2 2" Name="subtract" Click="subtract_Click" Content="-" FontSize="22" />
+
+                <Button Height="50" Margin="5 2 2 2" Name="equal" Click="equal_Click" Content="=" FontSize="22"/>
+            </StackPanel>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
